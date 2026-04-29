@@ -1,136 +1,131 @@
-import { ShieldCheck, Clock, MapPin } from "lucide-react";
 import Image from "next/image";
-
-const features = [
-  { icon: ShieldCheck, text: "%100 Doğal İçerik" },
-  { icon: Clock,       text: "Paket Servis Mevcut" },
-  { icon: MapPin,      text: "Yamaçtepe Mah., Onikişubat" },
-];
+import { Flame, Leaf, Clock } from "lucide-react";
 
 const menuItems = [
   {
     image: "/5.webp",
     badge: "EN POPÜLER",
-    badgeClass: "bg-red-50 text-brand-red border border-red-100",
+    badgeColor: "bg-brand-red text-white",
     title: "Mega Çiğköfte Dürüm",
-    description:
-      "Sarımsak, limon ve özel baharatlarla hazırlanan imzamız. Bol malzemeli mega boy dürüm seçeneğiyle servis edilir.",
-    note: "Acılı / Acısız seçeneği",
+    description: "Sarımsak, limon ve özel baharatlarla hazırlanan imzamız. Bol malzemeli mega boy.",
+    tags: ["Acılı / Acısız", "Büyük Boy"],
+    icon: Flame,
+    iconColor: "text-brand-red",
   },
   {
     image: "/11.webp",
     badge: "KLASİK",
-    badgeClass: "bg-gray-50 text-gray-600 border border-gray-200",
+    badgeColor: "bg-gray-800 text-white",
     title: "Tatlıses Dürüm",
-    description:
-      "İnce lavaş içinde taze çiğköfte, yeşillik ve domates. Her lokmada gerçek lezzet.",
-    note: "Küçük / Büyük boy",
+    description: "İnce lavaş içinde taze çiğköfte, yeşillik ve domates. Her lokmada gerçek lezzet.",
+    tags: ["Küçük / Büyük", "Klasik Tat"],
+    icon: Leaf,
+    iconColor: "text-gray-600",
   },
   {
     image: "/7.webp",
     badge: "TABAK",
-    badgeClass: "bg-orange-50 text-orange-700 border border-orange-100",
+    badgeColor: "bg-gray-600 text-white",
     title: "Çiğköfte Tabak",
-    description:
-      "Bol miktarda çiğköfte, taze nane, marul ve limon dilimleriyle hazırlanan doyurucu tabak seçeneği.",
-    note: "Acısız seçenek mevcut",
+    description: "Bol çiğköfte, taze nane, marul ve limon dilimleriyle hazırlanan doyurucu tabak.",
+    tags: ["Acısız Mevcut", "Doyurucu"],
+    icon: Leaf,
+    iconColor: "text-gray-600",
   },
   {
     image: "/6.webp",
     badge: "SET MENÜ",
-    badgeClass: "bg-blue-50 text-blue-700 border border-blue-100",
+    badgeColor: "bg-gray-700 text-white",
     title: "Çiğköfte + İçecek Set",
-    description:
-      "Dürüm çiğköfte ve seçtiğiniz içecekle ekonomik set menü. Öğleden akşama kadar geçerlidir.",
-    note: "Pepsi / Ayran seçeneği",
+    description: "Dürüm çiğköfte ve seçtiğiniz içecekle ekonomik set menü. Öğleden akşama geçerli.",
+    tags: ["Pepsi / Ayran", "Ekonomik"],
+    icon: Clock,
+    iconColor: "text-gray-600",
   },
   {
     image: "/9.webp",
-    badge: "ÖZEL",
-    badgeClass: "bg-purple-50 text-purple-700 border border-purple-100",
+    badge: "ÖZEL SUNUM",
+    badgeColor: "bg-brand-red-dark text-white",
     title: "Çiğköfte Şiş",
-    description:
-      "Şiş üzerinde özel sunumla hazırlanan, görsel ve lezzet açısından hem göze hem damağa hitap eden özel servis.",
-    note: "Garnitür ile birlikte",
+    description: "Şiş üzerinde özel sunumla hazırlanan, görsel ve lezzet açısından eşsiz deneyim.",
+    tags: ["Garnitür Dahil", "Özel Sunum"],
+    icon: Flame,
+    iconColor: "text-brand-red",
   },
   {
     image: "/8.webp",
-    badge: "DÜRÜM + AYRAN",
-    badgeClass: "bg-green-50 text-green-700 border border-green-100",
+    badge: "KOMBO",
+    badgeColor: "bg-gray-500 text-white",
     title: "Dürüm + Ayran Kombo",
-    description:
-      "Lezzetli dürüm çiğköfteniz yanında serinletici ayranla tam bir uyum. Öğün atlamayanlar için ideal.",
-    note: "Soğuk servis",
+    description: "Lezzetli dürüm çiğköfteniz yanında serinletici ayranla tam uyum.",
+    tags: ["Soğuk Servis", "İdeal Öğün"],
+    icon: Leaf,
+    iconColor: "text-gray-600",
   },
 ];
 
 export default function Menu() {
   return (
-    <>
-      {/* Features bar */}
-      <div className="bg-brand-red py-3 px-4">
-        <div className="max-w-5xl mx-auto flex flex-wrap justify-center gap-8">
-          {features.map(({ icon: Icon, text }) => (
-            <div key={text} className="flex items-center gap-2 text-white">
-              <Icon size={16} strokeWidth={2.5} />
-              <span className="text-xs font-bold">{text}</span>
-            </div>
-          ))}
+    <section id="menu" className="py-20 px-4 bg-white">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-14">
+          <span className="inline-block text-brand-red text-xs font-bold tracking-widest uppercase border-b-2 border-brand-red pb-1 mb-4">Menümüz</span>
+          <h2 className="font-display font-black text-gray-900 mb-3" style={{ fontSize: "clamp(2rem,5vw,2.8rem)" }}>
+            Lezzetlerimizi Keşfedin
+          </h2>
+          <p className="text-gray-500 text-sm max-w-md mx-auto leading-relaxed">
+            Taze ve doğal malzemelerle her gün özenle hazırlanan eşsiz tatlarımız
+          </p>
         </div>
-      </div>
 
-      {/* Menu section */}
-      <section id="menu" className="py-16 px-4 bg-white">
-        <div className="max-w-5xl mx-auto">
-          {/* Heading */}
-          <div className="text-center mb-12">
-            <div className="inline-block w-12 h-0.5 bg-brand-red mb-4" />
-            <h2 className="font-display text-4xl font-bold text-brand-red-dark mb-3">
-              Lezzetlerimiz
-            </h2>
-            <p className="text-gray-500 text-sm max-w-sm mx-auto leading-relaxed">
-              Taze ve doğal malzemelerle hazırlanan eşsiz tatlarımızla sizi bekliyoruz
-            </p>
-          </div>
-
-          {/* Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-            {menuItems.map((item) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-gray-200">
+          {menuItems.map((item, idx) => {
+            const Icon = item.icon;
+            return (
               <div
                 key={item.title}
-                className="bg-white overflow-hidden shadow-sm border border-gray-200 hover:shadow-md transition-shadow"
+                className="bg-white overflow-hidden card-hover animate-fade-up"
+                style={{ animationDelay: `${idx * 0.08}s` }}
               >
-                {/* Product image */}
-                <div className="h-64 relative overflow-hidden">
+                <div className="relative h-72 overflow-hidden">
                   <Image
                     src={item.image}
                     alt={item.title}
                     fill
-                    sizes="(max-width: 640px) 100vw, 33vw"
-                    className="object-cover"
+                    sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw"
+                    className="object-cover hover:scale-105 transition-transform duration-500"
                   />
+                  <div className="absolute top-0 left-0">
+                    <span className={`text-[10px] font-black px-3 py-1.5 tracking-wider ${item.badgeColor}`}>
+                      {item.badge}
+                    </span>
+                  </div>
                 </div>
-                {/* Content */}
                 <div className="p-5">
-                  <span className={`text-[11px] font-bold px-2.5 py-1 ${item.badgeClass}`}>
-                    {item.badge}
-                  </span>
-                  <h3 className="font-display text-xl font-bold text-brand-red-dark mt-2.5 mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-xs text-gray-500 leading-relaxed">
-                    {item.description}
-                  </p>
-                  <div className="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between">
-                    <span className="text-[11px] text-gray-400">{item.note}</span>
-                    <div className="w-2 h-2 bg-brand-red" />
+                  <div className="flex items-start justify-between mb-2">
+                    <h3 className="font-display font-bold text-gray-900 text-lg leading-tight">{item.title}</h3>
+                    <Icon size={17} className={`${item.iconColor} shrink-0 mt-0.5 ml-2`} />
+                  </div>
+                  <p className="text-gray-500 text-sm leading-relaxed mb-4">{item.description}</p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {item.tags.map((tag) => (
+                      <span key={tag} className="text-[11px] bg-gray-100 text-gray-600 px-2.5 py-1 font-medium">
+                        {tag}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
+            );
+          })}
         </div>
-      </section>
-    </>
+
+        <div className="text-center mt-12">
+          <a href="tel:05447900446" className="inline-flex items-center gap-2 bg-brand-red hover:bg-brand-red-light text-white font-bold px-8 py-4 shadow-lg hover:shadow-xl transition-all text-sm">
+            Sipariş Vermek İçin Arayın
+          </a>
+        </div>
+      </div>
+    </section>
   );
 }
