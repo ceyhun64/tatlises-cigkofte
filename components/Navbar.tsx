@@ -9,8 +9,8 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const links = [
-    { href: "#menu",    label: "Menü" },
-    { href: "#about",   label: "Hakkımızda" },
+    { href: "#menu", label: "Menü" },
+    { href: "#about", label: "Hakkımızda" },
     { href: "#contact", label: "İletişim" },
   ];
 
@@ -20,7 +20,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3">
           <Image
-            src="https://www.tatlisescigkofte.com/wp-content/uploads/2023/02/tatlises-logo-2.png"
+            src="/logo.png"
             alt="Tatlıses Çiğköfte"
             width={130}
             height={44}

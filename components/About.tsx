@@ -62,13 +62,13 @@ export default function About() {
         {/* Photo grid - şubeden gerçek fotoğraflar */}
         <div className="grid grid-cols-2 gap-3">
           <div className="relative rounded-xl overflow-hidden h-40">
-            <Image src="/4.webp" alt="Mutlu müşterilerimiz" fill className="object-cover" />
+            <Image src="/4.webp" alt="Mutlu müşterilerimiz" fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover" />
           </div>
           <div className="relative rounded-xl overflow-hidden h-40">
-            <Image src="/12.webp" alt="Tatlıses çiğköfte tabak" fill className="object-cover" />
+            <Image src="/12.webp" alt="Tatlıses çiğköfte tabak" fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover" />
           </div>
           <div className="col-span-2 relative rounded-xl overflow-hidden h-32">
-            <Image src="/13.webp" alt="Tatlıses şiş çiğköfte" fill className="object-cover object-center" />
+            <Image src="/13.webp" alt="Tatlıses şiş çiğköfte" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover object-center" />
             <div className="absolute inset-0 bg-brand-red-dark/30" />
             <div className="absolute inset-0 flex items-end p-3">
               {stats.map((s) => (

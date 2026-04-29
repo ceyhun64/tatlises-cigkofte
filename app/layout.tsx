@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://www.tatlisescigkofte.com/wp-content/uploads/2023/02/tatlises-logo-2.png",
+        url: "/logo.png",
         width: 400,
         height: 134,
         alt: "Tatlıses Çiğköfte",

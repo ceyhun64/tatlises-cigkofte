@@ -10,6 +10,7 @@ export default function Hero() {
           src="/1.webp"
           alt="Tatlıses Çiğköfte Onikişubat Şubesi"
           fill
+          sizes="100vw"
           className="object-cover object-center"
           priority
         />
@@ -25,7 +26,7 @@ export default function Hero() {
         {/* Official logo */}
         <div className="flex justify-center mb-6">
           <Image
-            src="https://www.tatlisescigkofte.com/wp-content/uploads/2023/02/tatlises-logo-2.png"
+            src="/logo.png"
             alt="Tatlıses Çiğköfte"
             width={200}
             height={68}
@@ -57,8 +58,12 @@ export default function Hero() {
 
         {/* Sub-text */}
         <p className="text-white/70 text-base md:text-lg leading-relaxed mb-10 font-light max-w-sm mx-auto">
-          Türkiye&apos;nin en sevilen çiğköfte markasının<br />
-          <span className="text-brand-gold-light font-semibold">yetkili franchise şubesi</span> olarak hizmetinizdeyiz
+          Türkiye&apos;nin en sevilen çiğköfte markasının
+          <br />
+          <span className="text-brand-gold-light font-semibold">
+            yetkili franchise şubesi
+          </span>{" "}
+          olarak hizmetinizdeyiz
         </p>
 
         {/* CTAs */}

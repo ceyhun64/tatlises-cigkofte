@@ -2,10 +2,13 @@ import Image from "next/image";
 import { Store } from "lucide-react";
 
 const socialLinks = [
-  { label: "Instagram", href: "https://www.instagram.com/tatlisescigkoftemerkez" },
-  { label: "Facebook",  href: "https://www.facebook.com/tatlisesgida" },
-  { label: "TikTok",    href: "https://www.tiktok.com/@tatlisesgida" },
-  { label: "Ana Site",  href: "https://www.tatlisescigkofte.com" },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/tatlisescigkoftemerkez",
+  },
+  { label: "Facebook", href: "https://www.facebook.com/tatlisesgida" },
+  { label: "TikTok", href: "https://www.tiktok.com/@tatlisesgida" },
+  { label: "Ana Site", href: "https://www.tatlisescigkofte.com" },
 ];
 
 export default function Footer() {
@@ -14,7 +17,7 @@ export default function Footer() {
       <div className="max-w-5xl mx-auto flex flex-col items-center gap-6">
         {/* Official logo */}
         <Image
-          src="https://www.tatlisescigkofte.com/wp-content/uploads/2023/02/tatlises-logo-2.png"
+          src="/logo.png"
           alt="Tatlıses Çiğköfte"
           width={140}
           height={48}
@@ -51,11 +54,13 @@ export default function Footer() {
         {/* Copyright + Franchise Disclaimer */}
         <div className="text-center">
           <p className="text-white/25 text-[11px] leading-relaxed mb-2">
-            © {new Date().getFullYear()} Tatlıses Çiğköfte – Onikişubat / Kahramanmaraş
+            © {new Date().getFullYear()} Tatlıses Çiğköfte – Onikişubat /
+            Kahramanmaraş
           </p>
           <p className="text-white/20 text-[10px] leading-relaxed max-w-sm mx-auto">
-            Bu işyeri Tatlıses Gıda&apos;nın yetkili franchise şubesidir ve bağımsız olarak işletilmektedir.
-            Tüm marka hakları Tatlıses Gıda&apos;ya aittir.
+            Bu işyeri Tatlıses Gıda&apos;nın yetkili franchise şubesidir ve
+            bağımsız olarak işletilmektedir. Tüm marka hakları Tatlıses
+            Gıda&apos;ya aittir.
           </p>
         </div>
       </div>
