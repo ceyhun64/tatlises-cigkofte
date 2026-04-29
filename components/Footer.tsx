@@ -13,7 +13,7 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-brand-brown py-10 px-4">
+    <footer className="bg-brand-red-dark py-10 px-4">
       <div className="max-w-5xl mx-auto flex flex-col items-center gap-6">
         {/* Official logo */}
         <Image
@@ -25,10 +25,10 @@ export default function Footer() {
           unoptimized
         />
 
-        {/* Franchise label - belirgin */}
+        {/* Franchise label */}
         <div className="flex items-center gap-2 -mt-3">
-          <Store size={11} className="text-brand-gold-light/70" />
-          <p className="text-brand-gold-light/70 text-[10px] uppercase tracking-widest font-bold">
+          <Store size={11} className="text-white/60" />
+          <p className="text-white/60 text-[10px] uppercase tracking-widest font-bold">
             ONİKİŞUBAT Franchise Şubesi
           </p>
         </div>
@@ -53,7 +53,7 @@ export default function Footer() {
 
         {/* Copyright + Franchise Disclaimer */}
         <div className="text-center">
-          <p className="text-white/25 text-[11px] leading-relaxed mb-2">
+          <p className="text-white/30 text-[11px] leading-relaxed mb-2">
             © {new Date().getFullYear()} Tatlıses Çiğköfte – Onikişubat /
             Kahramanmaraş
           </p>
