@@ -10,8 +10,8 @@ const menuItems = [
   {
     emoji: "🌯",
     badge: "EN POPÜLER",
-    badgeColor: "bg-red-50 text-brand-red",
-    bg: "from-brand-red-dark to-brand-red-light",
+    badgeClass: "bg-red-50 text-brand-red",
+    bgClass: "bg-gradient-to-br from-brand-red-dark to-brand-red-light",
     title: "Çiğköfte",
     description:
       "Sarımsak, limon ve özel baharatlarla hazırlanan imzamız. Dürüm veya tabak seçeneğiyle servis edilir.",
@@ -20,8 +20,8 @@ const menuItems = [
   {
     emoji: "🫓",
     badge: "FIRINDA",
-    badgeColor: "bg-amber-50 text-brand-gold",
-    bg: "from-[#7A3A10] to-[#B85A25]",
+    badgeClass: "bg-amber-50 text-brand-gold",
+    bgStyle: { background: "linear-gradient(to bottom right, #7A3A10, #B85A25)" },
     title: "Tatlıses Pide",
     description:
       "Taş fırında pişirilen el yapımı pidelerimiz. Kıymalı, kaşarlı ve karışık çeşitler mevcuttur.",
@@ -30,8 +30,8 @@ const menuItems = [
   {
     emoji: "🥙",
     badge: "GELENEKSEL",
-    badgeColor: "bg-orange-50 text-orange-700",
-    bg: "from-[#6B2D10] to-[#A04515]",
+    badgeClass: "bg-orange-50 text-orange-700",
+    bgStyle: { background: "linear-gradient(to bottom right, #6B2D10, #A04515)" },
     title: "Lahmacun",
     description:
       "İnce hamur üzerinde özel kıyma harmanı. Taze sebze ve limonla servis edilir.",
@@ -73,17 +73,18 @@ export default function Menu() {
             {menuItems.map((item) => (
               <div
                 key={item.title}
-                className="bg-white rounded-2xl overflow-hidden shadow-sm border border-brand-red/8 hover:shadow-md transition-shadow"
+                className="bg-white rounded-2xl overflow-hidden shadow-sm border border-brand-red/10 hover:shadow-md transition-shadow"
               >
                 {/* Image area */}
                 <div
-                  className={`bg-gradient-to-br ${item.bg} h-36 flex items-center justify-center text-6xl`}
+                  className={`h-36 flex items-center justify-center text-6xl ${item.bgClass ?? ""}`}
+                  style={item.bgStyle}
                 >
                   {item.emoji}
                 </div>
                 {/* Content */}
                 <div className="p-5">
-                  <span className={`text-[11px] font-bold px-2.5 py-1 rounded-full ${item.badgeColor}`}>
+                  <span className={`text-[11px] font-bold px-2.5 py-1 rounded-full ${item.badgeClass}`}>
                     {item.badge}
                   </span>
                   <h3 className="font-display text-xl font-bold text-brand-red-dark mt-2.5 mb-2">
