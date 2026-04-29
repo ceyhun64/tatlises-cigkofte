@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Phone, Menu, X } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -18,14 +19,16 @@ export default function Navbar() {
       <div className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full bg-brand-gold flex items-center justify-center font-display font-black text-lg text-brand-red-dark select-none">
-            T
-          </div>
-          <div>
-            <p className="font-display font-bold text-white text-sm leading-tight">
-              Tatlıses Çiğköfte
-            </p>
-            <p className="text-white/50 text-[10px] uppercase tracking-widest">
+          <Image
+            src="https://www.tatlisescigkofte.com/wp-content/uploads/2023/02/tatlises-logo-2.png"
+            alt="Tatlıses Çiğköfte"
+            width={130}
+            height={44}
+            className="h-10 w-auto object-contain"
+            unoptimized
+          />
+          <div className="hidden sm:block border-l border-white/20 pl-3">
+            <p className="text-white/50 text-[10px] uppercase tracking-widest leading-tight">
               Onikişubat · Kahramanmaraş
             </p>
           </div>

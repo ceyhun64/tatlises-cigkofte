@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const socialLinks = [
   { label: "Instagram", href: "https://www.instagram.com/tatlisescigkoftemerkez" },
   { label: "Facebook",  href: "https://www.facebook.com/tatlisesgida" },
@@ -7,22 +9,22 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-brand-brown py-8 px-4">
-      <div className="max-w-5xl mx-auto flex flex-col items-center gap-5">
-        {/* Logo */}
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full bg-brand-gold flex items-center justify-center font-display font-black text-base text-brand-red-dark select-none">
-            T
-          </div>
-          <div>
-            <p className="font-display font-bold text-white text-sm leading-tight">
-              Tatlıses Çiğköfte
-            </p>
-            <p className="text-white/40 text-[10px] uppercase tracking-widest">
-              Onikişubat Şubesi
-            </p>
-          </div>
-        </div>
+    <footer className="bg-brand-brown py-10 px-4">
+      <div className="max-w-5xl mx-auto flex flex-col items-center gap-6">
+        {/* Official logo */}
+        <Image
+          src="https://www.tatlisescigkofte.com/wp-content/uploads/2023/02/tatlises-logo-2.png"
+          alt="Tatlıses Çiğköfte"
+          width={140}
+          height={48}
+          className="h-12 w-auto object-contain opacity-90"
+          unoptimized
+        />
+
+        {/* Branch label */}
+        <p className="text-white/40 text-[10px] uppercase tracking-widest -mt-3">
+          Onikişubat Franchise Şubesi
+        </p>
 
         {/* Social / nav links */}
         <div className="flex flex-wrap justify-center gap-5">
@@ -39,11 +41,14 @@ export default function Footer() {
           ))}
         </div>
 
+        {/* Divider */}
+        <div className="w-16 h-px bg-white/10" />
+
         {/* Copyright */}
         <p className="text-white/25 text-[11px] text-center leading-relaxed">
           © {new Date().getFullYear()} Tatlıses Çiğköfte – Onikişubat / Kahramanmaraş
           <br />
-          Tüm hakları saklıdır.
+          Franchise şubesidir. Tüm hakları Tatlıses Gıda'ya aittir.
         </p>
       </div>
     </footer>

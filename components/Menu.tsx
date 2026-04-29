@@ -1,4 +1,5 @@
 import { ShieldCheck, Clock, MapPin } from "lucide-react";
+import Image from "next/image";
 
 const features = [
   { icon: ShieldCheck, text: "%100 Doğal İçerik" },
@@ -8,31 +9,28 @@ const features = [
 
 const menuItems = [
   {
-    emoji: "🌯",
+    image: "https://www.tatlisescigkofte.com/wp-content/uploads/2023/08/ozel-cig-kofte-1024x682.jpg",
     badge: "EN POPÜLER",
     badgeClass: "bg-red-50 text-brand-red",
-    bgClass: "bg-gradient-to-br from-brand-red-dark to-brand-red-light",
-    title: "Çiğköfte",
+    title: "Tatlıses Çiğ Köfte",
     description:
       "Sarımsak, limon ve özel baharatlarla hazırlanan imzamız. Dürüm veya tabak seçeneğiyle servis edilir.",
     note: "Acılı / Acısız seçeneği",
   },
   {
-    emoji: "🫓",
+    image: "https://www.tatlisescigkofte.com/wp-content/uploads/2023/08/pide-1-1-1024x683.jpg",
     badge: "FIRINDA",
     badgeClass: "bg-amber-50 text-brand-gold",
-    bgStyle: { background: "linear-gradient(to bottom right, #7A3A10, #B85A25)" },
     title: "Tatlıses Pide",
     description:
       "Taş fırında pişirilen el yapımı pidelerimiz. Kıymalı, kaşarlı ve karışık çeşitler mevcuttur.",
     note: "Çeşitli dolgu seçenekleri",
   },
   {
-    emoji: "🥙",
+    image: "https://www.tatlisescigkofte.com/wp-content/uploads/2023/08/lahmacun-10-1024x683.jpg",
     badge: "GELENEKSEL",
     badgeClass: "bg-orange-50 text-orange-700",
-    bgStyle: { background: "linear-gradient(to bottom right, #6B2D10, #A04515)" },
-    title: "Lahmacun",
+    title: "Tatlıses Lahmacun",
     description:
       "İnce hamur üzerinde özel kıyma harmanı. Taze sebze ve limonla servis edilir.",
     note: "İnce & çıtır hamur",
@@ -75,12 +73,15 @@ export default function Menu() {
                 key={item.title}
                 className="bg-white rounded-2xl overflow-hidden shadow-sm border border-brand-red/10 hover:shadow-md transition-shadow"
               >
-                {/* Image area */}
-                <div
-                  className={`h-36 flex items-center justify-center text-6xl ${item.bgClass ?? ""}`}
-                  style={item.bgStyle}
-                >
-                  {item.emoji}
+                {/* Product image */}
+                <div className="h-44 relative overflow-hidden">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover"
+                    unoptimized
+                  />
                 </div>
                 {/* Content */}
                 <div className="p-5">

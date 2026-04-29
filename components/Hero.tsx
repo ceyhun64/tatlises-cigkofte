@@ -1,23 +1,40 @@
 import { Phone, ChevronDown } from "lucide-react";
+import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative bg-gradient-to-br from-brand-red-dark via-brand-red to-[#A02020] min-h-[520px] flex items-center justify-center text-center px-4 py-16 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-brand-red-dark via-brand-red to-[#A02020] min-h-[560px] flex items-center justify-center text-center px-4 py-16 overflow-hidden">
       {/* Decorative circles */}
       <div className="absolute -top-16 -right-16 w-72 h-72 rounded-full bg-brand-gold/10 pointer-events-none" />
       <div className="absolute -bottom-10 -left-10 w-52 h-52 rounded-full bg-brand-gold/8 pointer-events-none" />
 
       <div className="relative z-10 max-w-xl">
+        {/* Official logo */}
+        <div className="flex justify-center mb-6">
+          <Image
+            src="https://www.tatlisescigkofte.com/wp-content/uploads/2023/02/tatlises-logo-2.png"
+            alt="Tatlıses Çiğköfte"
+            width={200}
+            height={68}
+            className="h-16 w-auto object-contain"
+            unoptimized
+          />
+        </div>
+
         {/* Badge */}
         <span className="inline-block bg-brand-gold/20 border border-brand-gold-light/60 text-brand-gold-light text-[11px] font-bold tracking-[2px] uppercase px-5 py-1.5 rounded-full mb-6">
           Kahramanmaraş · Onikişubat
         </span>
 
-        {/* Heading */}
-        <h1 className="font-display text-5xl md:text-6xl font-black text-white leading-tight mb-4">
-          Tatlıses<br />
-          <span className="text-brand-gold-light italic">Çiğköfte</span>
-        </h1>
+        {/* Tagline — İbrahim Tatlıses'in sözü */}
+        <blockquote className="mb-4">
+          <p className="font-display text-2xl md:text-3xl italic text-brand-gold-light leading-snug mb-2">
+            "Yemediğimi yedirmem"
+          </p>
+          <cite className="text-white/50 text-xs not-italic tracking-widest uppercase">
+            — İbrahim Tatlıses
+          </cite>
+        </blockquote>
 
         {/* Sub-text */}
         <p className="text-white/70 text-base md:text-lg leading-relaxed mb-10 font-light max-w-sm mx-auto">

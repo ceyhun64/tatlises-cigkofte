@@ -1,8 +1,8 @@
 const stats = [
-  { value: "%100", label: "Doğal" },
+  { value: "1990", label: "Kuruluş Yılı" },
+  { value: "%100", label: "Doğal İçerik" },
   { value: "Her Gün", label: "Taze Hazır" },
   { value: "Hızlı", label: "Paket Servis" },
-  { value: "Uygun", label: "Fiyatlar" },
 ];
 
 export default function About() {
@@ -17,15 +17,28 @@ export default function About() {
             <span className="text-brand-gold-light italic">Tatlıses?</span>
           </h2>
           <p className="text-white/70 text-sm leading-relaxed mb-4">
-            Tatlıses Çiğköfte, yılların deneyimi ve kalitesiyle Türkiye'nin
-            dört bir yanında hizmet vermektedir. Onikişubat şubemizde de aynı
-            özeni ve kaliteyi sizlere sunuyoruz.
+            1990 yılında İbrahim Tatlıses tarafından kurulan Tatlıses Şirketler
+            Grubu, Tatlıses Gıda çatısı altında Türkiye'nin dört bir yanında
+            yüzlerce şubeyle hizmet vermektedir.
+          </p>
+          <p className="text-white/70 text-sm leading-relaxed mb-4">
+            Onikişubat şubemizde de aynı fabrika standardında, günlük taze
+            üretilen çiğköfte, pide ve lahmacun lezzetlerini sizlere sunuyoruz.
           </p>
           <p className="text-white/70 text-sm leading-relaxed">
-            Her gün taze hazırlanan ürünlerimiz, hijyenik ortamda ve
-            gülümsemeyle sizlere ulaştırılıyor. Müşteri memnuniyeti bizim için
-            her şeyden önemlidir.
+            Hijyenik ortamda, gülümsemeyle hazırlanan ürünlerimiz; müşteri
+            memnuniyetini her şeyin önünde tutan anlayışımızla kapınıza kadar
+            ulaşıyor.
           </p>
+
+          <a
+            href="https://www.tatlisescigkofte.com/hakkimizda/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 mt-7 text-brand-gold-light text-sm font-bold hover:underline"
+          >
+            Marka hakkında daha fazla bilgi →
+          </a>
         </div>
 
         {/* Stats grid */}
