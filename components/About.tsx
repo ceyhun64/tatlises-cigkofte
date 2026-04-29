@@ -1,8 +1,10 @@
+import { Store } from "lucide-react";
+
 const stats = [
-  { value: "1990", label: "Kuruluş Yılı" },
+  { value: "1990", label: "Marka Kuruluş Yılı" },
   { value: "%100", label: "Doğal İçerik" },
   { value: "Her Gün", label: "Taze Hazır" },
-  { value: "Hızlı", label: "Paket Servis" },
+  { value: "Yetkili", label: "Franchise Şubesi" },
 ];
 
 export default function About() {
@@ -16,13 +18,28 @@ export default function About() {
             Neden{" "}
             <span className="text-brand-gold-light italic">Tatlıses?</span>
           </h2>
+
+          {/* Franchise Notice */}
+          <div className="flex items-start gap-3 bg-brand-gold/15 border border-brand-gold-light/30 rounded-xl p-4 mb-5">
+            <Store size={18} className="text-brand-gold-light shrink-0 mt-0.5" />
+            <div>
+              <p className="text-brand-gold-light text-xs font-bold uppercase tracking-wider mb-1">
+                Yetkili Franchise Şubesi
+              </p>
+              <p className="text-white/70 text-xs leading-relaxed">
+                Bu işyeri, Tatlıses Gıda tarafından yetkilendirilmiş bağımsız bir franchise şubesidir.
+                Tüm ürünler ana markanın standart ve kalitesinde üretilmektedir.
+              </p>
+            </div>
+          </div>
+
           <p className="text-white/70 text-sm leading-relaxed mb-4">
             1990 yılında İbrahim Tatlıses tarafından kurulan Tatlıses Şirketler
-            Grubu, Tatlıses Gıda çatısı altında Türkiye'nin dört bir yanında
+            Grubu, Tatlıses Gıda çatısı altında Türkiye&apos;nin dört bir yanında
             yüzlerce şubeyle hizmet vermektedir.
           </p>
           <p className="text-white/70 text-sm leading-relaxed mb-4">
-            Onikişubat şubemizde de aynı fabrika standardında, günlük taze
+            Onikişubat franchise şubemizde de aynı fabrika standardında, günlük taze
             üretilen çiğköfte, pide ve lahmacun lezzetlerini sizlere sunuyoruz.
           </p>
           <p className="text-white/70 text-sm leading-relaxed">

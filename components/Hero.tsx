@@ -1,9 +1,9 @@
-import { Phone, ChevronDown } from "lucide-react";
+import { Phone, ChevronDown, Store } from "lucide-react";
 import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative bg-gradient-to-br from-brand-red-dark via-brand-red to-[#A02020] min-h-[560px] flex items-center justify-center text-center px-4 py-16 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-brand-red-dark via-brand-red to-[#A02020] min-h-[580px] flex items-center justify-center text-center px-4 py-16 overflow-hidden">
       {/* Decorative circles */}
       <div className="absolute -top-16 -right-16 w-72 h-72 rounded-full bg-brand-gold/10 pointer-events-none" />
       <div className="absolute -bottom-10 -left-10 w-52 h-52 rounded-full bg-brand-gold/8 pointer-events-none" />
@@ -21,15 +21,21 @@ export default function Hero() {
           />
         </div>
 
-        {/* Badge */}
-        <span className="inline-block bg-brand-gold/20 border border-brand-gold-light/60 text-brand-gold-light text-[11px] font-bold tracking-[2px] uppercase px-5 py-1.5 rounded-full mb-6">
-          Kahramanmaraş · Onikişubat
-        </span>
+        {/* Franchise Badge - belirgin */}
+        <div className="flex flex-col items-center gap-2 mb-6">
+          <span className="inline-flex items-center gap-2 bg-brand-gold/20 border border-brand-gold-light/60 text-brand-gold-light text-[11px] font-bold tracking-[2px] uppercase px-5 py-1.5 rounded-full">
+            <Store size={12} />
+            Franchise Şubesi
+          </span>
+          <span className="inline-block bg-white/10 border border-white/20 text-white/80 text-[11px] font-semibold tracking-[1.5px] uppercase px-5 py-1.5 rounded-full">
+            Kahramanmaraş · Onikişubat
+          </span>
+        </div>
 
         {/* Tagline — İbrahim Tatlıses'in sözü */}
         <blockquote className="mb-4">
           <p className="font-display text-2xl md:text-3xl italic text-brand-gold-light leading-snug mb-2">
-            "Yemediğimi yedirmem"
+            &ldquo;Yemediğimi yedirmem&rdquo;
           </p>
           <cite className="text-white/50 text-xs not-italic tracking-widest uppercase">
             — İbrahim Tatlıses
@@ -38,7 +44,8 @@ export default function Hero() {
 
         {/* Sub-text */}
         <p className="text-white/70 text-base md:text-lg leading-relaxed mb-10 font-light max-w-sm mx-auto">
-          Türkiye'nin en sevilen çiğköfte markası<br />Kahramanmaraş'ta hizmetinizde
+          Türkiye&apos;nin en sevilen çiğköfte markasının<br />
+          <span className="text-brand-gold-light font-semibold">yetkili franchise şubesi</span> olarak hizmetinizdeyiz
         </p>
 
         {/* CTAs */}

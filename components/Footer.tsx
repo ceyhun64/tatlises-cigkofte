@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Store } from "lucide-react";
 
 const socialLinks = [
   { label: "Instagram", href: "https://www.instagram.com/tatlisescigkoftemerkez" },
@@ -21,10 +22,13 @@ export default function Footer() {
           unoptimized
         />
 
-        {/* Branch label */}
-        <p className="text-white/40 text-[10px] uppercase tracking-widest -mt-3">
-          Onikişubat Franchise Şubesi
-        </p>
+        {/* Franchise label - belirgin */}
+        <div className="flex items-center gap-2 -mt-3">
+          <Store size={11} className="text-brand-gold-light/70" />
+          <p className="text-brand-gold-light/70 text-[10px] uppercase tracking-widest font-bold">
+            ONİKİŞUBAT Franchise Şubesi
+          </p>
+        </div>
 
         {/* Social / nav links */}
         <div className="flex flex-wrap justify-center gap-5">
@@ -44,12 +48,16 @@ export default function Footer() {
         {/* Divider */}
         <div className="w-16 h-px bg-white/10" />
 
-        {/* Copyright */}
-        <p className="text-white/25 text-[11px] text-center leading-relaxed">
-          © {new Date().getFullYear()} Tatlıses Çiğköfte – Onikişubat / Kahramanmaraş
-          <br />
-          Franchise şubesidir. Tüm hakları Tatlıses Gıda'ya aittir.
-        </p>
+        {/* Copyright + Franchise Disclaimer */}
+        <div className="text-center">
+          <p className="text-white/25 text-[11px] leading-relaxed mb-2">
+            © {new Date().getFullYear()} Tatlıses Çiğköfte – Onikişubat / Kahramanmaraş
+          </p>
+          <p className="text-white/20 text-[10px] leading-relaxed max-w-sm mx-auto">
+            Bu işyeri Tatlıses Gıda&apos;nın yetkili franchise şubesidir ve bağımsız olarak işletilmektedir.
+            Tüm marka hakları Tatlıses Gıda&apos;ya aittir.
+          </p>
+        </div>
       </div>
     </footer>
   );

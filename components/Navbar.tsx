@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Phone, Menu, X } from "lucide-react";
+import { Phone, Menu, X, Store } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -28,7 +28,11 @@ export default function Navbar() {
             unoptimized
           />
           <div className="hidden sm:block border-l border-white/20 pl-3">
-            <p className="text-white/50 text-[10px] uppercase tracking-widest leading-tight">
+            <p className="text-brand-gold-light text-[9px] uppercase tracking-widest leading-tight font-bold flex items-center gap-1">
+              <Store size={9} />
+              Franchise Şubesi
+            </p>
+            <p className="text-white/50 text-[9px] uppercase tracking-widest leading-tight">
               Onikişubat · Kahramanmaraş
             </p>
           </div>
