@@ -3,7 +3,20 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative bg-gradient-to-br from-brand-red-dark via-brand-red to-[#A02020] min-h-[580px] flex items-center justify-center text-center px-4 py-16 overflow-hidden">
+    <section className="relative min-h-[580px] flex items-center justify-center text-center px-4 py-16 overflow-hidden">
+      {/* Arka plan resmi - şube fotoğrafı */}
+      <div className="absolute inset-0">
+        <Image
+          src="/1.webp"
+          alt="Tatlıses Çiğköfte Onikişubat Şubesi"
+          fill
+          className="object-cover object-center"
+          priority
+        />
+        {/* Koyu kırmızı overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-red-dark/90 via-brand-red/85 to-[#A02020]/80" />
+      </div>
+
       {/* Decorative circles */}
       <div className="absolute -top-16 -right-16 w-72 h-72 rounded-full bg-brand-gold/10 pointer-events-none" />
       <div className="absolute -bottom-10 -left-10 w-52 h-52 rounded-full bg-brand-gold/8 pointer-events-none" />
@@ -21,7 +34,7 @@ export default function Hero() {
           />
         </div>
 
-        {/* Franchise Badge - belirgin */}
+        {/* Franchise Badge */}
         <div className="flex flex-col items-center gap-2 mb-6">
           <span className="inline-flex items-center gap-2 bg-brand-gold/20 border border-brand-gold-light/60 text-brand-gold-light text-[11px] font-bold tracking-[2px] uppercase px-5 py-1.5 rounded-full">
             <Store size={12} />
@@ -32,7 +45,7 @@ export default function Hero() {
           </span>
         </div>
 
-        {/* Tagline — İbrahim Tatlıses'in sözü */}
+        {/* Tagline */}
         <blockquote className="mb-4">
           <p className="font-display text-2xl md:text-3xl italic text-brand-gold-light leading-snug mb-2">
             &ldquo;Yemediğimi yedirmem&rdquo;

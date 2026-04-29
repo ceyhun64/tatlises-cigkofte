@@ -1,4 +1,5 @@
 import { Store } from "lucide-react";
+import Image from "next/image";
 
 const stats = [
   { value: "1990", label: "Marka Kuruluş Yılı" },
@@ -40,7 +41,7 @@ export default function About() {
           </p>
           <p className="text-white/70 text-sm leading-relaxed mb-4">
             Onikişubat franchise şubemizde de aynı fabrika standardında, günlük taze
-            üretilen çiğköfte, pide ve lahmacun lezzetlerini sizlere sunuyoruz.
+            üretilen çiğköfte lezzetlerini sizlere sunuyoruz.
           </p>
           <p className="text-white/70 text-sm leading-relaxed">
             Hijyenik ortamda, gülümsemeyle hazırlanan ürünlerimiz; müşteri
@@ -58,19 +59,26 @@ export default function About() {
           </a>
         </div>
 
-        {/* Stats grid */}
-        <div className="grid grid-cols-2 gap-3.5">
-          {stats.map((s) => (
-            <div
-              key={s.label}
-              className="bg-white/8 border border-white/12 rounded-xl p-5 text-center"
-            >
-              <p className="font-display text-2xl font-black text-brand-gold-light">
-                {s.value}
-              </p>
-              <p className="text-white/55 text-xs mt-1">{s.label}</p>
+        {/* Photo grid - şubeden gerçek fotoğraflar */}
+        <div className="grid grid-cols-2 gap-3">
+          <div className="relative rounded-xl overflow-hidden h-40">
+            <Image src="/4.webp" alt="Mutlu müşterilerimiz" fill className="object-cover" />
+          </div>
+          <div className="relative rounded-xl overflow-hidden h-40">
+            <Image src="/12.webp" alt="Tatlıses çiğköfte tabak" fill className="object-cover" />
+          </div>
+          <div className="col-span-2 relative rounded-xl overflow-hidden h-32">
+            <Image src="/13.webp" alt="Tatlıses şiş çiğköfte" fill className="object-cover object-center" />
+            <div className="absolute inset-0 bg-brand-red-dark/30" />
+            <div className="absolute inset-0 flex items-end p-3">
+              {stats.map((s) => (
+                <div key={s.label} className="flex-1 text-center">
+                  <p className="font-display text-lg font-black text-brand-gold-light leading-none">{s.value}</p>
+                  <p className="text-white/70 text-[9px] mt-0.5">{s.label}</p>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>

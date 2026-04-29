@@ -9,31 +9,58 @@ const features = [
 
 const menuItems = [
   {
-    image: "https://www.tatlisescigkofte.com/wp-content/uploads/2023/08/ozel-cig-kofte-1024x682.jpg",
+    image: "/5.webp",
     badge: "EN POPÜLER",
     badgeClass: "bg-red-50 text-brand-red",
-    title: "Tatlıses Çiğ Köfte",
+    title: "Mega Çiğköfte Dürüm",
     description:
-      "Sarımsak, limon ve özel baharatlarla hazırlanan imzamız. Dürüm veya tabak seçeneğiyle servis edilir.",
+      "Sarımsak, limon ve özel baharatlarla hazırlanan imzamız. Bol malzemeli mega boy dürüm seçeneğiyle servis edilir.",
     note: "Acılı / Acısız seçeneği",
   },
   {
-    image: "https://www.tatlisescigkofte.com/wp-content/uploads/2023/08/pide-1-1-1024x683.jpg",
-    badge: "FIRINDA",
+    image: "/11.webp",
+    badge: "KLASİK",
     badgeClass: "bg-amber-50 text-brand-gold",
-    title: "Tatlıses Pide",
+    title: "Tatlıses Dürüm",
     description:
-      "Taş fırında pişirilen el yapımı pidelerimiz. Kıymalı, kaşarlı ve karışık çeşitler mevcuttur.",
-    note: "Çeşitli dolgu seçenekleri",
+      "İnce lavaş içinde taze çiğköfte, yeşillik ve domates. Her lokmada gerçek lezzet.",
+    note: "Küçük / Büyük boy",
   },
   {
-    image: "https://www.tatlisescigkofte.com/wp-content/uploads/2023/08/lahmacun-10-1024x683.jpg",
-    badge: "GELENEKSEL",
+    image: "/7.webp",
+    badge: "TABAK",
     badgeClass: "bg-orange-50 text-orange-700",
-    title: "Tatlıses Lahmacun",
+    title: "Çiğköfte Tabak",
     description:
-      "İnce hamur üzerinde özel kıyma harmanı. Taze sebze ve limonla servis edilir.",
-    note: "İnce & çıtır hamur",
+      "Bol miktarda çiğköfte, taze nane, marul ve limon dilimleriyle hazırlanan doyurucu tabak seçeneği.",
+    note: "Acısız seçenek mevcut",
+  },
+  {
+    image: "/6.webp",
+    badge: "SET MENÜ",
+    badgeClass: "bg-blue-50 text-blue-700",
+    title: "Çiğköfte + İçecek Set",
+    description:
+      "Dürüm çiğköfte ve seçtiğiniz içecekle ekonomik set menü. Öğleden akşama kadar geçerlidir.",
+    note: "Pepsi / Ayran seçeneği",
+  },
+  {
+    image: "/9.webp",
+    badge: "ÖZEL",
+    badgeClass: "bg-purple-50 text-purple-700",
+    title: "Çiğköfte Şiş",
+    description:
+      "Şiş üzerinde özel sunumla hazırlanan, görsel ve lezzet açısından hem göze hem damağa hitap eden özel servis.",
+    note: "Garnitür ile birlikte",
+  },
+  {
+    image: "/8.webp",
+    badge: "DÜRÜM + AYRAN",
+    badgeClass: "bg-green-50 text-green-700",
+    title: "Dürüm + Ayran Kombo",
+    description:
+      "Lezzetli dürüm çiğköfteniz yanında serinletici ayranla tam bir uyum. Öğün atlamayanlar için ideal.",
+    note: "Soğuk servis",
   },
 ];
 
@@ -80,7 +107,6 @@ export default function Menu() {
                     alt={item.title}
                     fill
                     className="object-cover"
-                    unoptimized
                   />
                 </div>
                 {/* Content */}
